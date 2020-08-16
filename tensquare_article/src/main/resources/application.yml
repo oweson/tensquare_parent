@@ -1,0 +1,26 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: tensquare-article #指定服务名
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.224.35.86:3306/tensquare_article?characterEncoding=UTF8&useSSL=false
+    username: root
+    password: df-21
+  jpa:
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 139.224.35.86
+    password: df-21
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ConnectTimeout: 2100 #请求连接的超时时间，默认时间为1秒
+  ReadTimeout: 2100 #请求处理的超时时间

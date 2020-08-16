@@ -1,0 +1,20 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/oweson/tensqure_dev.git
+          search-paths: sub/son/  # 当配置文件存放在子目录下时，可通过模式匹配来检索子目录sub下的配置文件
+  rabbitmq:
+    host: 139.224.35.86
+    username: guest
+    password: guest
+management: # 暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

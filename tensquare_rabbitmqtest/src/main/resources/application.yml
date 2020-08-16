@@ -1,0 +1,12 @@
+server:
+  port: 8097
+spring:
+  rabbitmq:
+    host: 139.224.35.86
+    port: 5672
+    virtual-host: /mall
+    username: guest
+    password: guest
+    publisher-confirms: true #如果对异步消息需要回调必须设置为true
+
+

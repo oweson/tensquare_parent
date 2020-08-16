@@ -1,0 +1,15 @@
+server: 
+  port: 1997
+spring: 
+  application:  
+    name: tensquare-demo #指定服务名
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
