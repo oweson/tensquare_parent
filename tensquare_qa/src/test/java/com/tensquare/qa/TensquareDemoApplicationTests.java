@@ -52,7 +52,7 @@ public class TensquareDemoApplicationTests {
     public  void  find(){
 
         Problem problem = new Problem();
-        problem.setContent("cmd");
+        problem.setContent("cmd!");
         ExampleMatcher content = ExampleMatcher.matching().withMatcher("content", ExampleMatcher.GenericPropertyMatchers.contains());
         //创建匹配器，即如何使用查询条件
         Example<Problem> problemExample = Example.of(problem, content);
