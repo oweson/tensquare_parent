@@ -81,10 +81,10 @@ public class ArticleService {
      * @return
      */
     public Article findById(String id) {
-        //从缓存中取
+        // 1 从缓存中取
         Article article = (Article) redisTemplate.opsForValue().get("article_" + id);
         if (article == null) {
-            //缓存中没有就从数据库中读取并放入缓存
+            // 2 缓存中没有就从数据库中读取并放入缓存
             article = articleDao.findById(id).get();
             redisTemplate.opsForValue().set("article_" + id, article, 10L, TimeUnit.SECONDS);
         }
@@ -111,8 +111,14 @@ public class ArticleService {
         articleDao.save(article);
     }
 
+    public void update01(Article article) {
+        redisTemplate.delete("article_" + article.getId());
+        articleDao.save(article);
+    }
+
     /**
      * 7 删除
+     * 双删数据
      *
      * @param id
      */

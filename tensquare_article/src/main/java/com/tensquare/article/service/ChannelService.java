@@ -121,7 +121,6 @@ public class ChannelService {
     private Specification<Channel> createSpecification(Map searchMap) {
 
         return new Specification<Channel>() {
-
             @Override
             public Predicate toPredicate(Root<Channel> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
                 List<Predicate> predicateList = new ArrayList<Predicate>();

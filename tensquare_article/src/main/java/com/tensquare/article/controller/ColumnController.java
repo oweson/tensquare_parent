@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 /**
- * 控制器层
+ * 专栏控制器层
  *
  * @author Administrator
  */

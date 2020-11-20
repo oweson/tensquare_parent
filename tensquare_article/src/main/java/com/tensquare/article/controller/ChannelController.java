@@ -20,7 +20,7 @@ import entity.Result;
 import entity.StatusCode;
 
 /**
- * 控制器层
+ * 频道控制器层
  *
  * @author Administrator
  */

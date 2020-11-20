@@ -93,6 +93,10 @@ public class ColumnService {
         column.setId(idWorker.nextId() + "");
         columnDao.save(column);
     }
+    public void add01(Column column){
+        column.setId(idWorker+"");
+        columnDao.save(column);
+    }
 
     /**
      * 6 修改
@@ -119,9 +123,7 @@ public class ColumnService {
      * @return
      */
     private Specification<Column> createSpecification(Map searchMap) {
-
         return new Specification<Column>() {
-
             @Override
             public Predicate toPredicate(Root<Column> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
                 List<Predicate> predicateList = new ArrayList<Predicate>();

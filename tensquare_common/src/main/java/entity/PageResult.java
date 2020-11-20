@@ -2,6 +2,11 @@ package entity;
 
 import java.util.List;
 
+/**
+ * 分页返回对象
+ *
+ * @param <T>
+ */
 public class PageResult<T> {
     private Long total;
     private List<T> rows;

@@ -18,6 +18,28 @@ public class Result {
      */
     private Object data;
 
+    /**
+     * 1 成功无返回数据
+     *
+     * @param flag
+     * @param code
+     * @param message
+     */
+    public Result(boolean flag, Integer code, String message) {
+        super();
+        this.flag = flag;
+        this.code = code;
+        this.message = message;
+    }
+
+    /**
+     * 2 成功有返回数据
+     *
+     * @param flag
+     * @param code
+     * @param message
+     * @param data
+     */
     public Result(boolean flag, Integer code, String message, Object data) {
         super();
         this.flag = flag;
@@ -29,12 +51,6 @@ public class Result {
     public Result() {
     }
 
-    public Result(boolean flag, Integer code, String message) {
-        super();
-        this.flag = flag;
-        this.code = code;
-        this.message = message;
-    }
 
     public boolean isFlag() {
         return flag;
