@@ -5,9 +5,9 @@ spring:
     name: tensquare-friend # 指定服务名
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.224.35.86:3306/tensquare_friend?characterEncoding=UTF-8&serverTimezone=UTC&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://localhost:3307/tensquare_friend?characterEncoding=UTF-8&serverTimezone=UTC&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
-    password: df-21
+    password: 111111
   jpa:
     database: mysql
     show-sql: true

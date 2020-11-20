@@ -5,13 +5,13 @@ spring:
     name: tensquare-gathering #指定服务名
   datasource:  
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.224.35.86:3306/tensquare_gathering?characterEncoding=UTF8
+    url: jdbc:mysql://localhost:3307/tensquare_gathering?characterEncoding=UTF8
     username: root
-    password: df-21
+    password: 111111
   jpa: 
     database: MySQL
     show-sql: true
   redis:
-    host: 47.94.153.206
-    password: df-21
+    host: localhost
+    password:
     port: 6379
